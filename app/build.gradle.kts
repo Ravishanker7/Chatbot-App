@@ -70,7 +70,7 @@ dependencies {
 
     implementation("com.google.ai.client.generativeai:generativeai:0.6.0")
 
-    val lifecycle_version = "2.8.0"
+    val lifecycle_version = "2.7.0"
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle_version")
 
 }

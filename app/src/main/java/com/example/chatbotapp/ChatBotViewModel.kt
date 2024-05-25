@@ -1,6 +1,7 @@
 package com.example.chatbotapp
 
 import android.util.Log
+import androidx.compose.runtime.mutableStateListOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.ai.client.generativeai.GenerativeModel
@@ -9,9 +10,8 @@ import kotlinx.coroutines.launch
 
 class ChatBotViewModel : ViewModel() {
 
-
     val list by lazy {
-        mutableListOf<ChatData>()
+        mutableStateListOf<ChatData>()
     }
     private val genAi by lazy {
         GenerativeModel(

@@ -1,5 +1,6 @@
 package com.example.chatbotapp.components
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,9 +21,10 @@ import com.example.chatbotapp.ChatRoleEnum
 fun ChatList(
     list: MutableList<ChatData>
 ) {
-    LazyColumn(modifier = Modifier.fillMaxSize()) {
+    LazyColumn(modifier = Modifier.fillMaxSize().background(Color.Cyan)) {
         items(list){
             if(it.role==ChatRoleEnum.USER.role){
+
                 Text(
                     text = it.message,
                     modifier = Modifier
