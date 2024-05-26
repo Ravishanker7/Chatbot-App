@@ -13,6 +13,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.chatbotapp.Screens.SignupScreen
 import com.example.chatbotapp.ui.theme.ChatBotAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -21,8 +22,11 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ChatBotAppTheme {
-                Surface(modifier = Modifier.fillMaxSize().padding(20.dp)) {
-                    ChatBot()
+                Surface(modifier = Modifier
+                    .fillMaxSize()
+                    .padding(20.dp)) {
+                    //ChatBot()
+                    SignupScreen()
                 }
             }
         }
