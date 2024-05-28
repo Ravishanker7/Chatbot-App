@@ -13,6 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import com.example.chatbotapp.NavController.NavController
 import com.example.chatbotapp.Screens.SignupScreen
 import com.example.chatbotapp.ui.theme.ChatBotAppTheme
 
@@ -23,10 +26,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             ChatBotAppTheme {
                 Surface(modifier = Modifier
-                    .fillMaxSize()
-                    .padding(20.dp)) {
+                    .fillMaxSize()) {
                     //ChatBot()
-                    SignupScreen()
+                    NavController()
                 }
             }
         }
